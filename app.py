@@ -69,7 +69,7 @@ with tab1:
         wszystkie = res.get('events', [])
         
         if wybor == "🌍 CAŁY ŚWIAT (Top Ligi)":
-            mecze = [m for m in wszystkie if m.get('tournament', {}).get('priority', 0) > 300]
+            mecze = [m for m in wszystkie if m.get('tournament', {}).get('priority', 0) > 0]
         else:
             mecze = [m for m in wszystkie if m.get('tournament', {}).get('id') == ligi_dict[wybor]]
             
